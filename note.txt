@@ -1,0 +1,44 @@
+
+Go ethereum
+
+sudo apt-get install software-properties-common
+
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install ethereum
+sudo apt-get upgrade geth
+
+sudo tar -xvf <filename>  
+In our case,
+
+sudo tar -xvf  geth-linux-amd64-1.10.15-8be800ff.tar.gz 
+Step into extracted folder
+
+cd geth-linux-amd64-1.10.15-8be800ff 
+It should contain the geth file, make it executable with the below command.
+
+sudo chmod +x geth
+
+Copy file to the user bin.
+sudo cp geth /usr/local/bin/
+
+
+geth init --datadir node1 biten.json
+cd node1
+geth --nodiscover --syncmode full --allow-insecure-unlock --ws --ws.addr 0.0.0.0 --ws.port 9095 --ws.rpcprefix "/" --ws.origins "*" --http.rpcprefix "/" --http --http.api eth,web3,miner,admin,personal,net,db --http.rpcprefix "/" --http.vhosts "*" --http.addr "0.0.0.0" --http.corsdomain "*" --http.port 8085 --nat "any" --http.api eth,web3,miner,admin,txpool,debug,personal,net --ipcpath /data/btnnode/geth.ipc --datadir "./" --port 30305 --networkid 1025 --mine --miner.threads=1 --miner.etherbase=0xaddress
+
+sudo ufw allow http
+sudo ufw allow https
+sudo ufw allow 8085/tcp
+sudo ufw allow 9095/tcp
+sudo ufw allow 30305/tcp
+
+
+geth attach https://rpc.biten.io
+Or
+geth attach http://185.192.97.41:8085
+
+enode: admin.addPeer("enode://2aa11d122e2947cc6f6559a9b6493559edcafd06c083a9a9218a42c622aa40633ecbd6aa88867e289331ad51d6e1af6ba239e7296dee60a9e37cc580145da9a1@185.192.97.41:30305?discport=0")
+
+
+
