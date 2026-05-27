@@ -38,7 +38,7 @@ geth attach https://rpc.biten.io
 Or
 geth attach http://185.192.97.41:8085
 
-enode: admin.addPeer("enode://2aa11d122e2947cc6f6559a9b6493559edcafd06c083a9a9218a42c622aa40633ecbd6aa88867e289331ad51d6e1af6ba239e7296dee60a9e37cc580145da9a1@185.192.97.41:30305?discport=0")
+enode: admin.addPeer("enode://15218c0feaffd86e0014cde5dd4c1cfe4a4d885b30783008f717c56bb71ffbde876e214b8b46475b94e89a499def600a8847d729c26a201089c974257cd5f8c6@185.192.97.41:30305?discport=0")
 
 
 
