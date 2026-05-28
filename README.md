@@ -38,9 +38,9 @@ cd node1
 geth --nodiscover --syncmode full --allow-insecure-unlock --ws --ws.addr 0.0.0.0 --ws.port 9095 --ws.rpcprefix "/" --ws.origins "*" --http.rpcprefix "/" --http --http.api eth,web3,miner,admin,personal,net,db --http.rpcprefix "/" --http.vhosts "*" --http.addr "0.0.0.0" --http.corsdomain "*" --http.port 8085 --nat "any" --http.api eth,web3,miner,admin,txpool,debug,personal,net --ipcpath /data/btnnode/geth.ipc --datadir "./" --port 30305 --networkid 1025 --mine --miner.threads=1 --miner.etherbase=0xaddress
 
 
-geth attach [https://rpc.biten.io](https://rpc.biten.io)
+geth attach https://rpc.biten.io
 # Or
-geth attach [http://185.192.97.41:8085](http://185.192.97.41:8085)
+geth attach http://185.192.97.41:8085
 
 
 admin.addPeer("enode://15218c0feaffd86e0014cde5dd4c1cfe4a4d885b30783008f717c56bb71ffbde876e214b8b46475b94e89a499def600a8847d729c26a201089c974257cd5f8c6@185.192.97.41:30305?discport=0")
