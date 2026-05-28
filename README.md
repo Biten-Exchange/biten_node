@@ -35,7 +35,7 @@ geth init --datadir node1 biten.json
 cd node1
 
 # Start the node with consensus parameters, RPC, WebSockets, and mining flags
-geth --nodiscover --syncmode full --allow-insecure-unlock --ws --ws.addr 0.0.0.0 --ws.port 9095 --ws.rpcprefix "/" --ws.origins "*" --http.rpcprefix "/" --http --http.api eth,web3,miner,admin,personal,net,db --http.rpcprefix "/" --http.vhosts "*" --http.addr "0.0.0.0" --http.corsdomain "*" --http.port 8085 --nat "any" --http.api eth,web3,miner,admin,txpool,debug,personal,net --ipcpath /data/btnnode/geth.ipc --datadir "./" --port 30305 --networkid 1025 --mine --miner.threads=1 --miner.etherbase=0xaddress
+geth --nodiscover --syncmode full --allow-insecure-unlock --ws --ws.addr 0.0.0.0 --ws.port 9095 --ws.rpcprefix "/" --ws.origins "*" --http.rpcprefix "/" --http --http.api eth,web3,miner,admin,personal,net,db --http.rpcprefix "/" --http.vhosts "*" --http.addr "0.0.0.0" --http.corsdomain "*" --http.port 8085 --nat "any" --http.api eth,web3,miner,admin,txpool,debug,personal,net --ipcpath /data/btnnode/geth.ipc --datadir "./" --port 30305 --networkid 2026 --mine --miner.threads=1 --miner.etherbase=0xaddress
 
 
 geth attach https://rpc.biten.io
