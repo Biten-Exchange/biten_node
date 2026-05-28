@@ -15,6 +15,13 @@ sudo apt-get update
 sudo apt-get install ethereum
 sudo apt-get upgrade geth
 
+# Allow Port From Server Incoming & Outgoing
+
+sudo ufw allow http
+sudo ufw allow https
+sudo ufw allow 8085/tcp
+sudo ufw allow 9095/tcp
+sudo ufw allow 30305/tcp
 
 # Extract the tarball
 sudo tar -xvf geth-linux-amd64-1.10.15-8be800ff.tar.gz 
